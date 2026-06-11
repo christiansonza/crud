@@ -149,7 +149,7 @@ $(document).ready(function () {
             showConfirmButton: false
         });
     }
-
+ 
     // ADD DEPARTMENT
     $('#deptForm').submit(function(e){
         e.preventDefault();
