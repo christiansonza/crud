@@ -7,7 +7,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\AuthController;
 
 
-/* AUTH ROUTES */
+// AUTH ROUTES 
 Route::get('/register', [AuthController::class, 'showRegister']);
 Route::post('/register', [AuthController::class, 'register']);
 
@@ -16,7 +16,7 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
-/* PAGE ROUTES */
+//PAGE ROUTES
 
 Route::middleware('auth.manual')->group(function () {
 

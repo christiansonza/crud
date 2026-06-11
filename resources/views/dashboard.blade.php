@@ -181,11 +181,17 @@ $(document).ready(function () {
                 </tr>
             `);
 
-            $('#emp_department').append(`
-                <option value="${res.id}">
-                    ${res.name}
-                </option>
-            `);
+            if ($("#emp_department option[value='" + res.id + "']").length === 0) {
+
+                $('#emp_department').append(`
+                    <option value="${res.id}">${res.name}</option>
+                `);
+
+                $('#edit_emp_department').append(`
+                    <option value="${res.id}">${res.name}</option>
+                `);
+
+            }
 
             $('#dept_name').val('');
 
